@@ -12,6 +12,8 @@
 		1536E28721C77B18001E1BF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1536E28521C77B18001E1BF8 /* Main.storyboard */; };
 		1536E28921C77B19001E1BF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1536E28821C77B19001E1BF8 /* Assets.xcassets */; };
 		1536E28C21C77B19001E1BF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1536E28A21C77B19001E1BF8 /* LaunchScreen.storyboard */; };
+		1562FC3221C788D20018EF4B /* SnapBehaviorSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FC3021C788D20018EF4B /* SnapBehaviorSceneViewController.swift */; };
+		1562FC3321C788D20018EF4B /* SnapBehaviorSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1562FC3121C788D20018EF4B /* SnapBehaviorSceneViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1536E28821C77B19001E1BF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1536E28B21C77B19001E1BF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1536E28D21C77B19001E1BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1562FC3021C788D20018EF4B /* SnapBehaviorSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapBehaviorSceneViewController.swift; sourceTree = "<group>"; };
+		1562FC3121C788D20018EF4B /* SnapBehaviorSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnapBehaviorSceneViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		1536E28021C77B18001E1BF8 /* ITRUIDynamicsTest */ = {
 			isa = PBXGroup;
 			children = (
+				1562FC2F21C788A80018EF4B /* SnapBehaviorScene */,
 				1536E28121C77B18001E1BF8 /* AppDelegate.swift */,
 				1536E28321C77B18001E1BF8 /* ViewController.swift */,
 				1536E28521C77B18001E1BF8 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				1536E28D21C77B19001E1BF8 /* Info.plist */,
 			);
 			path = ITRUIDynamicsTest;
+			sourceTree = "<group>";
+		};
+		1562FC2F21C788A80018EF4B /* SnapBehaviorScene */ = {
+			isa = PBXGroup;
+			children = (
+				1562FC3021C788D20018EF4B /* SnapBehaviorSceneViewController.swift */,
+				1562FC3121C788D20018EF4B /* SnapBehaviorSceneViewController.xib */,
+			);
+			path = SnapBehaviorScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,7 +88,6 @@
 				1536E27A21C77B18001E1BF8 /* Sources */,
 				1536E27B21C77B18001E1BF8 /* Frameworks */,
 				1536E27C21C77B18001E1BF8 /* Resources */,
-				1562FC3421C789ED0018EF4B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,30 +139,11 @@
 				1536E28C21C77B19001E1BF8 /* LaunchScreen.storyboard in Resources */,
 				1536E28921C77B19001E1BF8 /* Assets.xcassets in Resources */,
 				1536E28721C77B18001E1BF8 /* Main.storyboard in Resources */,
+				1562FC3321C788D20018EF4B /* SnapBehaviorSceneViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1562FC3421C789ED0018EF4B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1536E27A21C77B18001E1BF8 /* Sources */ = {
@@ -157,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1536E28421C77B18001E1BF8 /* ViewController.swift in Sources */,
+				1562FC3221C788D20018EF4B /* SnapBehaviorSceneViewController.swift in Sources */,
 				1536E28221C77B18001E1BF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VGV7FQQC57;
 				INFOPLIST_FILE = ITRUIDynamicsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,7 +306,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itransition.ITRUIDynamicsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,9 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VGV7FQQC57;
 				INFOPLIST_FILE = ITRUIDynamicsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -333,7 +323,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itransition.ITRUIDynamicsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
