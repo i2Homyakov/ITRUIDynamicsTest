@@ -14,6 +14,7 @@
 		1536E28C21C77B19001E1BF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1536E28A21C77B19001E1BF8 /* LaunchScreen.storyboard */; };
 		1562FC3221C788D20018EF4B /* SnapBehaviorSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FC3021C788D20018EF4B /* SnapBehaviorSceneViewController.swift */; };
 		1562FC3321C788D20018EF4B /* SnapBehaviorSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1562FC3121C788D20018EF4B /* SnapBehaviorSceneViewController.xib */; };
+		1562FC3821C796650018EF4B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FC3721C796650018EF4B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1536E28D21C77B19001E1BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1562FC3021C788D20018EF4B /* SnapBehaviorSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapBehaviorSceneViewController.swift; sourceTree = "<group>"; };
 		1562FC3121C788D20018EF4B /* SnapBehaviorSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnapBehaviorSceneViewController.xib; sourceTree = "<group>"; };
+		1562FC3721C796650018EF4B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		1536E28021C77B18001E1BF8 /* ITRUIDynamicsTest */ = {
 			isa = PBXGroup;
 			children = (
+				1562FC3621C796430018EF4B /* Extensions */,
 				1562FC2F21C788A80018EF4B /* SnapBehaviorScene */,
 				1536E28121C77B18001E1BF8 /* AppDelegate.swift */,
 				1536E28321C77B18001E1BF8 /* ViewController.swift */,
@@ -78,6 +81,14 @@
 			path = SnapBehaviorScene;
 			sourceTree = "<group>";
 		};
+		1562FC3621C796430018EF4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1562FC3721C796650018EF4B /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +99,7 @@
 				1536E27A21C77B18001E1BF8 /* Sources */,
 				1536E27B21C77B18001E1BF8 /* Frameworks */,
 				1536E27C21C77B18001E1BF8 /* Resources */,
+				1562FC3521C795A80018EF4B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -145,6 +157,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1562FC3521C795A80018EF4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1536E27A21C77B18001E1BF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +184,7 @@
 			files = (
 				1536E28421C77B18001E1BF8 /* ViewController.swift in Sources */,
 				1562FC3221C788D20018EF4B /* SnapBehaviorSceneViewController.swift in Sources */,
+				1562FC3821C796650018EF4B /* UIView+Extension.swift in Sources */,
 				1536E28221C77B18001E1BF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

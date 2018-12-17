@@ -24,7 +24,7 @@ class SnapBehaviorSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupAnimator()
         setupCardView()
     }
